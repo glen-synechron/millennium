@@ -1,4 +1,35 @@
 <%= "No free time slots are available" if free_time_slots.blank? %>
-<% free_time_slots.each do |free_time_slot|  %>
+
+<div class="searchReasult">
+        <ul class="notLast searched-ul-format">
+            <li class="thumb">
+                    <a href="#">
+                    <%= image_tag("bb_no_img_avail.png") %>
+                    </a>
+            </li>
+
+            <li class="info">
+                <div class="infoContent">
+                    <h4>
+                        <a href="#">Beauty Booked </a>
+                    </h4>
+                    <p>52 W21st Street</p>
+
+
+
+
+
+          
+
+                            <div class="salonSearchDescription">
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="listBookNow">
+                            <% free_time_slots.each do |free_time_slot|  %>
  <%= link_to Time.parse(free_time_slot).to_s(:with_meridian), appointments_path({app_date: app_date, app_time: free_time_slot }) %>
 <% end %>
+                        </li>
+                    </ul>
+                </div>

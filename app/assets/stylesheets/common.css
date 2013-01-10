@@ -1,9 +1,9 @@
+a, input{outline: none;}
 .logoArea {
     left: -18px;
     position: relative;
     top: 33px;
 }
-
 .logo {
     background: url("/assets/new-beta-black.png") no-repeat scroll 0 0 transparent;
     display: block;
@@ -64,8 +64,10 @@ div#dp-popup {
     width: 185px;
     
 }
-#slots{width:185px;padding-left:32px;}
-#slots a{
+#slots{
+   width: 905px;
+}
+#slots .listBookNow a{
     background: none repeat scroll 0 0 #000000;
     color: #C57CB5 !important;
     display: inline-block;
@@ -79,6 +81,7 @@ div#dp-popup {
     width: 65px;
 }
 #slots a:hover{text-decoration: none;}
+#slots .infoContent a:hover{background-color:transparent!important;}
 div.dp-popup h2 {
     color: #C57CB5!important;
 }
@@ -114,3 +117,96 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 .formField{display: inline-block;width: 300px;}
 .btnContainer{margin-top:10px;}
 #check_price{font-weight:bold;}
+
+.searchReasult {
+    display: table;
+    width: 100%;
+    padding-left: 32px;
+    border: 1px solid #000000;
+}
+
+.searchReasult ul {
+    display: table-row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.searchReasult ul li {
+    /*border-bottom: 1px solid #000000;*/
+    display: table-cell;
+    margin: 0;
+    padding: 15px 0 10px;
+    vertical-align: top;
+}
+
+.searchReasult ul li.thumb {
+    padding-top: 10px;
+    vertical-align: top;
+    width: 184px;
+}
+.searchReasult ul li.thumb a {
+    display: block;
+    height: 95px;
+    width: 181px;
+}
+
+.searchReasult ul li.info {
+    position: relative;
+    padding: 10px 5px;
+    width: 370px;
+}
+.infoContent {
+    height: 95px;
+    position: relative;
+}
+
+.searchReasult ul li.info h4 {
+    font-size: 12px;
+    margin:0px; 
+}
+
+.searchReasult ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+.searchReasult ul li a img{
+    height:95px;
+    max-width: 185px !important;
+    width: 184px !important;
+}
+.searchReasult ul li.info p {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+.searchReasult ul li li {
+    border-bottom: 0 solid;
+    padding: 0;
+}
+
+.infoLinkContent {
+    font-weight: bold;
+    margin: 5px 0;
+    width: 163px;
+}
+
+.searchReasult li.info a.show-searched-services1 {
+    margin-right: 15px;
+}
+
+.salonSearchDescription {
+    bottom: 0;
+    color: #464646;
+    line-height: 11px;
+    position: absolute;
+    width: 163px;
+}
+
+.searchReasult ul li.listBookNow {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px !important;
+    vertical-align: middle;
+    width: 143px;
+}

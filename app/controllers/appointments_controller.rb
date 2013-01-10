@@ -2,7 +2,11 @@ class AppointmentsController < ApplicationController
 
   before_filter :authenticate_user!
 
-  def index    
+  def index
+    all_free_slots = @salon.get_time_slots_by_date({'StartDate' => DateTime.parse(params[:app_date]),
+        'EndDate' => DateTime.parse(params[:app_date])})
+   @all_free_slots = (all_free_slots.select{|key, value| value.eql?(true) }).keys
+   #raise @all_free_slots.inspect
   end
 
   def book_appointment

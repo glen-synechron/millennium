@@ -13,7 +13,8 @@
 </div>
 <div class="formField">
 <b>Time</b> <br/>
-  <%= text_field_tag "appointment[time]", params[:app_time], readonly:true %>
+  <%#= text_field_tag "appointment[time]", params[:app_time], readonly:true %>
+  <%= select_tag("appointment[time]",  options_for_select(@all_free_slots, params[:app_time])) %>
 </div>
 
 <div id="check_price"></div>
