@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: {case_sensitive: false}
 
   def create_client(salon)
-    response =salon.get_client_info_by_email({email: self.email})
+    response = salon.get_client_info_by_email({email: self.email})
     if response.blank?
       begin
         response = salon.put_client({'client' => {
@@ -22,11 +22,10 @@ class User < ActiveRecord::Base
               'EmailAddress' => self.email
             }})
         self.update_attributes(client_id: response[:client_id].to_i)
-#        puts "::::::::::::::::::::"
-#        puts response[:client_id]
-#        puts "::::::::::::::::::::"
       rescue
       end
+    else
+      self.update_attributes(client_id: response[:client_id].to_i)
     end
   end
 end
