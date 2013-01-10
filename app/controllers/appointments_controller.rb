@@ -42,7 +42,7 @@ class AppointmentsController < ApplicationController
             'CategoryId' => -12
           }
         })
-        flash[:notice] = "Appointment booked for the user #{current_user.name} with appointment id #{appointment[:appointment_id]}"
+        flash[:notice] = "Appointment booked for the user #{current_user.first_name} with appointment id #{appointment[:appointment_id]}"
     end
     redirect_to :back
   end

@@ -1,3 +1,51 @@
+.logoArea {
+    left: -18px;
+    position: relative;
+    top: 33px;
+}
+
+.logo {
+    background: url("/assets/new-beta-black.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 51px;
+    width: 314px;
+    position: relative;
+    z-index: 10;
+    text-indent:-9999px;
+}
+a.logo:hover{background-color: transparent;}
+.navbar .nav {
+    float: right!important;
+     font-size: 16px;
+    top: -26px;
+    left: 20px;
+ }
+.search-free-slots{
+    background-image: url("/assets/search.JPG");
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 25px;
+    text-shadow: 0 0 0 #FFFFFF;
+    width: 100px;
+ }
+#search_free_slots_form img,#search_free_slots_form a {vertical-align: top;}
+#main{margin-top:52px;}
+.content .row form{
+  border: 8px solid #000000;
+  padding: 25px 8px 22px 22px;
+}
+a.dp-choose-date {
+    background: url("/assets/dateIcon.png") no-repeat scroll 0 0 transparent!important;
+    width:25px!important;
+    height:25px!important;
+    float:none!important;
+    display:inline-block!important;
+    color: transparent!important;
+    float:none!important;
+    margin-top:1px!important;
+}
+input.dp-applied{float:none!important;background-color:#fff!important;}
+input.time_entry,input.dp-applied{height:16px;}
 .content {
   background-color: #eee;
   padding: 20px;
@@ -9,11 +57,39 @@
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
-
+div#dp-popup {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin-top: 26px;
+    position: absolute;
+    width: 185px;
+    
+}
+#slots{width:185px;padding-left:32px;}
+#slots a{
+    background: none repeat scroll 0 0 #000000;
+    color: #C57CB5 !important;
+    display: inline-block;
+    float: left;
+    height: 18px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    padding: 2px 5px;
+    text-align: center;
+    vertical-align: top;
+    width: 65px;
+}
+#slots a:hover{text-decoration: none;}
+div.dp-popup h2 {
+    color: #C57CB5!important;
+}
+button.btn, input.btn[type="submit"],.span12 a.btn-primary {
+    background-color: #000000!important;
+    background-image: none!important;
+    color: #C57CB5!important;
+}
 .time_entry{
     width: 64px;
 }
-
 .dvLoading
 {
    background: url(ajax-loader.gif) no-repeat center center;
@@ -25,3 +101,16 @@
    top: 50%;
    margin: -25px 0 0 -25px;
 }
+#search_free_slots_form h2{
+ text-transform: uppercase;
+ font-weight: lighter;
+}
+.alert-success {
+    background-color: #FFFFFF!important;
+    border-color: #000000!important;
+    color: #C57CB5 !important;
+}
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]{background-color:#fff;}
+.formField{display: inline-block;width: 300px;}
+.btnContainer{margin-top:10px;}
+#check_price{font-weight:bold;}

@@ -43,7 +43,7 @@ function TimeEntry() {
 		defaultTime: null, // The time to use if none has been set, leave at null for now
 		minTime: null, // The earliest selectable time, or null for no limit
 		maxTime: null, // The latest selectable time, or null for no limit
-		spinnerImage: 'spinnerDefault.png', // The URL of the images to use for the time spinner
+		spinnerImage: 'spinnerDefault.gif', // The URL of the images to use for the time spinner
 			// Seven images packed horizontally for normal, each button pressed, and disabled
 		spinnerSize: [20, 20, 8], // The width and height of the spinner image,
 			// and size of centre button for current time
@@ -93,7 +93,7 @@ $.extend(TimeEntry.prototype, {
 		inst._field = 0; // The selected subfield
 		inst.input = $(target); // The attached input field
 		$.data(target, PROP_NAME, inst);
-		var spinnerImage = this._get(inst, 'spinnerImage');
+		var spinnerImage = this._get(inst, 'spinnerImage');		
 		var spinnerText = this._get(inst, 'spinnerText');
 		var spinnerSize = this._get(inst, 'spinnerSize');
 		var appendText = this._get(inst, 'appendText');

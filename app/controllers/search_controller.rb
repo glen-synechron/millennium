@@ -1,16 +1,6 @@
 class SearchController < ApplicationController
   
   def index    
-#    Millennium.login_to_api
-#    Millennium.fetch_all_appointments
-#
-#    #Millennium.create_appointment
-#    response = Millennium.fetch_all_employees
-#    @employees = []
-#    Nori.parse(response.body[:get_employee_listing_response][:get_employee_listing_result])[:get_employee_listing][:emp_info].each do |employee|
-#      @employees << {id: employee[:iid], name: employee[:cfirstname].strip} if employee[:cfirstname].is_a?(String)
-#    end
-    #raise (@salon.get_employee_listing({})).inspect
   end
 
   def slots

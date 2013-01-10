@@ -247,7 +247,7 @@
 										return false;
 									}
 								);
-						$this.after(controller.button);
+						$this.before(controller.button);
 					}
 					
 					if (!alreadyExists && $this.is(':text')) {

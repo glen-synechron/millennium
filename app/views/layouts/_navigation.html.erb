@@ -1,21 +1,27 @@
-<%= link_to "Beauty Booked", root_path, class: 'brand' %>
-<ul class="nav">
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>
-    </li>
-  <% else %>
-    <li>
-    <%= link_to('Login', new_user_session_path)  %>
-    </li>
-  <% end %>
-  <% if user_signed_in? %>
-    <li>
-    <%#= link_to('Edit account', edit_user_path(current_user)) %>
-    </li>
-  <% else %>
-    <li>
-    <%= link_to('Sign up', new_user_path)  %>
-    </li>
-  <% end %>
-</ul>
+
+<div class="logoArea">
+    <h1>
+      <!--<a title="SEARCH // DISCOVER // BOOK INSTANTLY" class="logo" href="/"></a>-->
+
+      <%= link_to "Beauty Booked", root_path, class: 'logo', title: 'SEARCH // DISCOVER // BOOK INSTANTLY' %>
+      </h1>
+</div>
+  <ul class="nav">
+    <% if user_signed_in? %>
+      <li>
+        <%= link_to('Welcome User - '+current_user.first_name.capitalize, "#") %>
+      </li>
+      <li>
+        <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to('Login', new_user_session_path)  %>
+      </li>
+    <% end %>
+    <% unless user_signed_in? %>
+      <li>
+        <%= link_to('Sign up', new_user_path)  %>
+      </li>
+    <% end %>
+  </ul>

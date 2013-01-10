@@ -1,11 +1,11 @@
 <%= form_tag(slots_search_index_path, id: "search_free_slots_form", remote: true) do %>
-  <!--Services <br/>
-  <%#= select_tag("search[service]",  options_for_select(@services)) %><br/>-->
-  Date <br/>
-  <%= text_field_tag "search[date]", nil,class: "date-pick", readonly: true %> <br/><br/><br/>
-  Time <br/>
-  <%= text_field_tag "search[time]", nil,class: "time_entry" %><%= image_tag("icon_clock.png") %><br/>
-  <%= link_to "Search", "javascript:void(0)", class: 'btn btn-primary search-free-slots' %>
+  <h2>Book A Beauty Appointment</h2>
+<!--Services <br/>
+<%#= select_tag("search[service]",  options_for_select(@services)) %><br/>-->
+  <%= text_field_tag "search[date]", nil,class: "date-pick", readonly: true %>
+  <%= image_tag("icon_clock.png") %>
+  <%= text_field_tag "search[time]", nil,class: "time_entry" %>
+  <%= link_to "", "javascript:void(0)", class: 'search-free-slots' %>
 <% end %>
 <div id="slots">
 </div>
