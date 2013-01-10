@@ -1,5 +1,5 @@
-namespace :add_details  do
-  desc "Add details to local database"
+namespace :salon_data  do
+  desc "Add first salon's employees to local database"
   task add_employees: :environment do
     if Employee.first.blank?
       salon = Salon.first
@@ -7,7 +7,7 @@ namespace :add_details  do
       Employee.create!(employees)
     end
   end
-  desc "Add details to local database"
+  desc "Add first salon's services to local database"
   task add_services: :environment do
     if Service.first.blank?
       salon = Salon.first
