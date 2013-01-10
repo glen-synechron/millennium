@@ -20,8 +20,8 @@ set :default_environment, {
 
 set :domain ,'108.166.82.56'
 set :user, "root"
-set :application, "beautybooked_millennium"
-set :repository, 'git@github.com:sparkway/beautyclaim.git' ###need to change
+set :application, "millennium"
+set :repository, 'git@github.com:glen-synechron/millennium.git' ###need to change
 set :scm, :git
 set :branch, "master"
 set :scm_verbose, true
@@ -117,7 +117,7 @@ namespace :bundler do
 
   task :bundle_new_release, :roles => :app do
     bundler.create_symlink
-    run "cd #{release_path} && source $HOME/.bash_profile && bundle install"
+#    run "cd #{release_path} && source $HOME/.bash_profile && bundle install"
   end
 end
 
