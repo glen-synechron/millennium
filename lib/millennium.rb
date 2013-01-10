@@ -80,7 +80,11 @@ module Millennium
     body = options
     response = request(__method__, body)
     client = Nori.parse(response.body[:get_client_info_by_email_response][:get_client_info_by_email_result])[:get_client_info_by_email][:clients]
-    {client_id: client[:iid].to_i, email: client[:cemail].strip, first_name: client[:cfirstname].strip, last_name: client[:clastname].strip}
+    if client.nil?
+      {}
+    else
+      {client_id: client[:iid].to_i, email: client[:cemail].strip, first_name: client[:cfirstname].strip, last_name: client[:clastname].strip}
+    end
   end
 
   # Returns array of hashes of employees
