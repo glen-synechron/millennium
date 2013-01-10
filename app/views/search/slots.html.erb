@@ -1,0 +1,3 @@
+<% @free_time_slots.each do |free_time_slot|  %>
+ <%= link_to Time.parse(free_time_slot).to_s(:with_meridian), "javscript:void(0)" %><br/>
+<% end %>

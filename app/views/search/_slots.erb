@@ -1,0 +1,4 @@
+<%= "No free time slots are available" if free_time_slots.blank? %>
+<% free_time_slots.each do |free_time_slot|  %>
+ <%= link_to Time.parse(free_time_slot).to_s(:with_meridian), appointments_path({app_date: app_date, app_time: free_time_slot }) %><br/>
+<% end %>

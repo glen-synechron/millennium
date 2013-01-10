@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  service_id: 1
+  service_class: MyString
+  service_sub_class: MyString
+  price: 1.5
+
+two:
+  service_id: 1
+  service_class: MyString
+  service_sub_class: MyString
+  price: 1.5

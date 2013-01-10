@@ -1,0 +1,13 @@
+<%= form_tag(book_appointment_appointments_path) do %>
+  Services <br/>
+  <%= select_tag("appointment[service]",  options_for_select(@services)) %><br/>
+  Employees <br/>
+  <%= select_tag("appointment[employee]",  options_for_select(@employees)) %><br/>
+  Date <br/>
+  <%= text_field_tag "appointment[date]", params[:app_date], readonly: true %><br/>
+  Time <br/>
+  <%= text_field_tag "appointment[time]", params[:app_time], readonly:true %><br/>
+  <div id="check_price"></div>
+  <%= link_to "Get Price", "javascript:void(0)",{class: 'btn btn-primary get-price'} %>
+  <%= submit_tag "Book Now", class: 'btn btn-primary' %>
+<% end %>
