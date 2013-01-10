@@ -6,8 +6,13 @@ module Millennium
     body = options
     response = request(__method__, body)
     all_appointments = Nori.parse(response.body[:get_all_appointments_by_date_response][:get_all_appointments_by_date_result])[:get_all_apptointments_by_date][:apptointments]
+    
+    # Three possibilities of all_appointments
+    # 1. nil converted to array
+    # 2. {} placed in an array
+    # 3. [] left as is
+    all_appointments = all_appointments.nil? ? [] : (all_appointments.is_a?(Hash)? [all_appointments] : all_appointments)
 
-    all_appointments = all_appointments.is_a?(Hash)? [all_appointments] : all_appointments
     appointments = []
     all_appointments.each do |appointment|
       appointment_start_time, appointment_end_time = format_start_end_time(appointment[:ddate], appointment[:ctimeofday], appointment[:nfinishlen])
@@ -74,7 +79,8 @@ module Millennium
   def get_client_info_by_email(options)
     body = options
     response = request(__method__, body)
-    Nori.parse(response.body[:get_client_info_by_email_response][:get_client_info_by_email_result])[:get_client_info_by_email][:clients]
+    client = Nori.parse(response.body[:get_client_info_by_email_response][:get_client_info_by_email_result])[:get_client_info_by_email][:clients]
+    {client_id: client[:iid].to_i, email: client[:cemail].strip, first_name: client[:cfirstname].strip, last_name: client[:clastname].strip}
   end
 
   # Returns array of hashes of employees
@@ -164,7 +170,7 @@ module Millennium
       exit
     else
       # Saving the session_id response after the login into a variable.
-      self.session_id = response.header[:session_info][:session_id]
+      self.update_attributes(session_id: response.header[:session_info][:session_id])
     end
   end
 
