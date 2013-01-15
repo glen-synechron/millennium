@@ -141,7 +141,7 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 }
 .searchReasult ul li {
     /*border-bottom: 1px solid #000000;*/
-    display: table-cell;
+    display:block;
     margin: 0;
     padding: 15px 0 10px;
     vertical-align: top;
@@ -164,7 +164,7 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 .searchReasult ul li.info {
     position: relative;
     padding: 10px 5px;
-    width: 500px;
+    width: auto;
 }
 .infoContent {
     height: 95px;
@@ -220,6 +220,7 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
     padding-top: 10px !important;
     vertical-align: middle;
     width: 200px;
+    float: right
 }
 
 table.jCalendar {
@@ -235,7 +236,7 @@ table.jCalendar td{
     color: #555555!important;
 }
 table.jCalendar td.today {
-    background-color:#BBBBBB!important;
+    background-color:#ababab!important;
     color: #000000 !important;
 }
 table.jCalendar td.other-month{
@@ -248,4 +249,8 @@ table.jCalendar th{
 div.dp-popup div.dp-nav-next,div.dp-popup div.dp-nav-prev{
     width:40px!important;
     top: 13px!important;
+}
+.current-month.weekday.disabled,.current-month.weekend.disabled{
+    background: none repeat scroll 0 0 #ccc!important;
+
 }
