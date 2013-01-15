@@ -1,11 +1,11 @@
 <%= form_tag(book_appointment_appointments_path) do %>
 <div class="formField">
 <b>Services</b> <br/>
-  <%= select_tag("appointment[service]",  options_for_select(@services)) %>
+  <%= select_tag("appointment[service]",  options_for_select(@services), class: "get-price") %>
 </div>
 <div class="formField">
 <b>Employees</b> <br/>
-  <%= select_tag("appointment[employee]",  options_for_select(@employees)) %>
+  <%= select_tag("appointment[employee]",  options_for_select(@employees), class: "get-price") %>
     </div>
 <div class="formField">
 <b>Date</b> <br/>
@@ -19,7 +19,7 @@
 
 <div id="check_price"></div>
 <div class="btnContainer">
-  <%= link_to "Get Price", "javascript:void(0)",{class: 'btn btn-primary get-price'} %>
+  <%#= link_to "Get Price", "javascript:void(0)",{class: 'btn btn-primary'} %>
   <%= submit_tag "Book Now", class: 'btn btn-primary' %>
   <%= link_to "Cancel", search_index_path, class: 'btn btn-primary' %>
 </div>

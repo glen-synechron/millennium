@@ -1,4 +1,4 @@
-a, input{outline: none;}
+a, input,select, option{outline: none!important;}
 .logoArea {
     left: -18px;
     position: relative;
@@ -18,21 +18,27 @@ a.logo:hover{background-color: transparent;}
     float: right!important;
      font-size: 16px;
     top: -26px;
-    left: 20px;
+    left: 40px;
  }
-.search-free-slots{
-    background-image: url("/assets/search.JPG");
-    background-repeat: no-repeat;
+.search-free-slots {
+    background-color: #000000;
+    color: #C57CB5;
     display: inline-block;
-    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 22px;
+    padding-top: 3px;
+    text-align: center;
     text-shadow: 0 0 0 #FFFFFF;
     width: 100px;
+    border-radius: 4px 4px 4px 4px;
  }
+ a.search-free-slots:hover{color:#C57CB5;text-decoration: none;}
 #search_free_slots_form img,#search_free_slots_form a {vertical-align: top;}
 #main{margin-top:52px;}
 .content .row form{
   border: 8px solid #000000;
-  padding: 25px 8px 22px 22px;
+  padding: 22px 8px 22px 22px;
 }
 a.dp-choose-date {
     background: url("/assets/dateIcon.png") no-repeat scroll 0 0 transparent!important;
@@ -65,14 +71,14 @@ div#dp-popup {
     
 }
 #slots{
-   width: 905px;
+   width: 100%;
 }
 #slots .listBookNow a{
     background: none repeat scroll 0 0 #000000;
     color: #C57CB5 !important;
     display: inline-block;
     float: left;
-    height: 18px;
+    height: 20px;
     margin-bottom: 5px;
     margin-right: 10px;
     padding: 2px 5px;
@@ -107,6 +113,8 @@ button.btn, input.btn[type="submit"],.span12 a.btn-primary {
 #search_free_slots_form h2{
  text-transform: uppercase;
  font-weight: lighter;
+ margin-top: 0;
+ padding-top: 0;
 }
 .alert-success {
     background-color: #FFFFFF!important;
@@ -121,7 +129,6 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 .searchReasult {
     display: table;
     width: 100%;
-    padding-left: 32px;
     border: 1px solid #000000;
 }
 
@@ -130,6 +137,7 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
     margin: 0;
     padding: 0;
     list-style: none;
+    
 }
 .searchReasult ul li {
     /*border-bottom: 1px solid #000000;*/
@@ -137,12 +145,15 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
     margin: 0;
     padding: 15px 0 10px;
     vertical-align: top;
+    float:left;
 }
 
 .searchReasult ul li.thumb {
     padding-top: 10px;
     vertical-align: top;
     width: 184px;
+    display: block;
+    margin-left: 32px;
 }
 .searchReasult ul li.thumb a {
     display: block;
@@ -153,7 +164,7 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 .searchReasult ul li.info {
     position: relative;
     padding: 10px 5px;
-    width: 370px;
+    width: 500px;
 }
 .infoContent {
     height: 95px;
@@ -208,5 +219,33 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
     padding-left: 10px;
     padding-top: 10px !important;
     vertical-align: middle;
-    width: 143px;
+    width: 200px;
+}
+
+table.jCalendar {
+    background: none repeat scroll 0 0 #D3D3D3!important;
+    border:0px solid!important;
+}
+table.jCalendar td.selected {
+    background: none repeat scroll 0 0 #C57CB5 !important;
+    color:#fff!important;
+}
+table.jCalendar td{
+    background: none repeat scroll 0 0 #F1F1F1!important;
+    color: #555555!important;
+}
+table.jCalendar td.today {
+    background-color:#BBBBBB!important;
+    color: #000000 !important;
+}
+table.jCalendar td.other-month{
+    background-color:#DDDDDD!important;
+}
+table.jCalendar th{
+    color: #222!important;
+    background: none repeat scroll 0 0 #fff!important;
+}
+div.dp-popup div.dp-nav-next,div.dp-popup div.dp-nav-prev{
+    width:40px!important;
+    top: 13px!important;
 }

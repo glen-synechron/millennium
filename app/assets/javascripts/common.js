@@ -17,11 +17,11 @@ $(".search-free-slots").live("click",function(){
       $(".dvLoading").show();
      }
      else{
-      alert("Please select app values")
+      alert("Please select date and time value")
     }
 });
 
-$(".get-price").live("click",function(){
+$(".get-price").live("change",function(){
     $(".dvLoading").show();
     $.ajax({
         url: '/appointments/check_price',

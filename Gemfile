@@ -35,7 +35,10 @@ group :development do
   #gem "better_errors", ">= 0.2.0"
   # Deploy with Capistrano
   gem 'capistrano'
+  #gem 'newrelic_rpm'
+  #gem 'rack-mini-profiler'
 end
+
 
 
 # To use ActiveModel has_secure_password
